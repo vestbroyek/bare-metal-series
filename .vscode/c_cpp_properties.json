@@ -1,18 +1,43 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "PlatformIO",
             "includePath": [
-                "${workspaceFolder}/**"
+                "/Users/maurits/training/courses/youtube/bare-metal-series/app/src",
+                "/Users/maurits/.platformio/packages/framework-libopencm3",
+                "/Users/maurits/.platformio/packages/framework-libopencm3/include",
+                ""
             ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/maurits/training/courses/youtube/bare-metal-series/app/src",
+                    "/Users/maurits/.platformio/packages/framework-libopencm3",
+                    "/Users/maurits/.platformio/packages/framework-libopencm3/include",
+                    ""
+                ]
+            },
             "defines": [
+                "PLATFORMIO=60116",
+                "STM32F407xx",
+                "ARDUINO_STM32GenericF407VET6",
                 "STM32F4",
-                "__ARM_ARCH_7EM__"
+                "F_CPU=168000000L",
+                ""
             ],
-            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
-            "cStandard": "c99",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "gcc-arm"
+            "compilerPath": "/Users/maurits/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m4",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16",
+                ""
+            ]
         }
     ],
     "version": 4

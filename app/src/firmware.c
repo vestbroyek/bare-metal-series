@@ -1,8 +1,9 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 
-#define LED_PORT (GPIOA)
-#define LED_PIN  (GPIO5)
+#define LED_PORT  (GPIOA)
+#define LED_PIN_1 (GPIO6)
+#define LED_PIN_2 (GPIO7)
 
 static void rcc_setup(void) {
   rcc_clock_setup_pll(&rcc_hsi_configs[RCC_CLOCK_3V3_84MHZ]);
@@ -10,7 +11,7 @@ static void rcc_setup(void) {
 
 static void gpio_setup(void) {
   rcc_periph_clock_enable(RCC_GPIOA);
-  gpio_mode_setup(LED_PORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, LED_PIN);
+  gpio_mode_setup(LED_PORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, LED_PIN_1 | LED_PIN_2);
 }
 
 static void delay_cycles(uint32_t cycles) {
@@ -24,10 +25,11 @@ int main(void) {
   gpio_setup();
 
   while (1) {
-    gpio_toggle(LED_PORT, LED_PIN);
     delay_cycles(84000000 / 4);
+    gpio_toggle(LED_PORT, LED_PIN_1);
+    delay_cycles(84000000 / 4);
+    gpio_toggle(LED_PORT, LED_PIN_2);
   }
 
-  // Never return
   return 0;
 }
