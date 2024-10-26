@@ -8,6 +8,7 @@
         {
             "name": "PlatformIO",
             "includePath": [
+                "/Users/maurits/training/courses/youtube/bare-metal-series/app/inc",
                 "/Users/maurits/training/courses/youtube/bare-metal-series/app/src",
                 "/Users/maurits/.platformio/packages/framework-libopencm3",
                 "/Users/maurits/.platformio/packages/framework-libopencm3/include",
@@ -16,6 +17,7 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
+                    "/Users/maurits/training/courses/youtube/bare-metal-series/app/inc",
                     "/Users/maurits/training/courses/youtube/bare-metal-series/app/src",
                     "/Users/maurits/.platformio/packages/framework-libopencm3",
                     "/Users/maurits/.platformio/packages/framework-libopencm3/include",
