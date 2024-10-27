@@ -5,18 +5,6 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "power_on",
-      "command": "JLinkExe -CommandFile .vscode/jlink/power-on.jlink",
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "label": "power_off",
-      "command": "JLinkExe -CommandFile .vscode/jlink/power-off.jlink",
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
       "label": "build_bootloader",
       "options": {
         "cwd": "bootloader"
@@ -26,12 +14,21 @@
     },
     {
       "type": "shell",
-      "label": "build_debug",
+      "label": "build_app",
       "options": {
         "cwd": "app"
       },
       "command": "make bin",
       "problemMatcher": "$gcc"
+    },
+    {
+      "type": "PlatformIO",
+      "task": "Build",
+      "problemMatcher": [
+        "$platformio"
+      ],
+      "group": "build",
+      "label": "PlatformIO: Build"
     }
   ]
 }
