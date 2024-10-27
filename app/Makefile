@@ -1,4 +1,3 @@
-
 # Be silent per default, but 'make V=1' will show all compiler calls.
 ifneq ($(V),1)
 Q		:= @
@@ -55,6 +54,8 @@ CSTD		?= -std=c99
 # Source files
 
 OBJS		+= $(SRC_DIR)/$(BINARY).o
+OBJS		+= $(SRC_DIR)/bootloader.o
+OBJS		+= $(SRC_DIR)/core/system.o
 
 ###############################################################################
 # C flags
