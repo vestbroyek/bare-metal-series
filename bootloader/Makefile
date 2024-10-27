@@ -8,7 +8,7 @@ SRC_DIR     = src
 INC_DIR     = inc
 OPENCM3_DIR = ../libopencm3
 
-BINARY = firmware
+BINARY = bootloader
 
 ###############################################################################
 # Basic Device Setup
@@ -54,9 +54,6 @@ CSTD		?= -std=c99
 # Source files
 
 OBJS		+= $(SRC_DIR)/$(BINARY).o
-OBJS		+= $(SRC_DIR)/bootloader.o
-OBJS		+= $(SRC_DIR)/core/system.o
-OBJS		+= $(SRC_DIR)/core/timer.o
 
 ###############################################################################
 # C flags
