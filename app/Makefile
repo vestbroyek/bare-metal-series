@@ -57,6 +57,11 @@ OBJS		+= $(SRC_DIR)/$(BINARY).o
 OBJS		+= $(SRC_DIR)/bootloader.o
 OBJS		+= $(SRC_DIR)/core/system.o
 
+# SRCS := $(wildcard $(SRC_DIR)/*.c)
+# SRCS += $(wildcard $(SRC_DIR)/core/*.c)
+# OBJS := $(SRCS:.c=.o)
+
+
 ###############################################################################
 # C flags
 
