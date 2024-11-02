@@ -135,6 +135,7 @@ print-%:
 %.bin: %.elf
 	@#printf "  OBJCOPY $(*).bin\n"
 	$(Q)$(OBJCOPY) -Obinary $(*).elf $(*).bin
+	python3 pad_bootloader.py
 
 %.hex: %.elf
 	@#printf "  OBJCOPY $(*).hex\n"
